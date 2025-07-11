@@ -16,7 +16,7 @@
     --glow-shadow: 0 0 20px rgba(0, 192, 255, 0.5); /* Glowing effect for important elements */
 }
 
-/* Light Mode Variables - Uncommented for functionality */
+/* Light Mode Variables */
 .light-mode {
     --bg-dark: #F0F2F5; /* Very light gray background */
     --bg-medium: #FFFFFF; /* Pure white for sections/header/cards */
@@ -41,13 +41,14 @@ body {
     -webkit-font-smoothing: antialiased; /* Better font rendering */
     -moz-osx-font-smoothing: grayscale; /* Better font rendering */
     transition: background-color var(--transition-speed), color var(--transition-speed); /* Smooth theme transition */
+    font-size: 0.95rem; /* Điều chỉnh: Giảm font chữ cơ bản */
 }
 
 /* Global Styles for headings and strong tags */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--text-light); /* White for headings */
-    margin-bottom: 0.8em;
+    margin-bottom: 0.7em; /* Điều chỉnh: Giảm margin-bottom cho heading */
     font-weight: 700; /* Bold for headings */
     transition: color var(--transition-speed); /* Smooth theme transition */
 }
@@ -71,7 +72,7 @@ a:hover {
 /* Navigation */
 header {
     background-color: var(--bg-medium); /* Slightly lighter black for header */
-    padding: 1rem 0;
+    padding: 0.8rem 0; /* Điều chỉnh: Giảm padding header */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -85,13 +86,14 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 2.5rem; /* Increased spacing for luxury feel */
+    gap: 2rem; /* Điều chỉnh: Giảm khoảng cách giữa các mục nav */
 }
 
 nav ul li a {
     color: var(--text-light);
     font-weight: 600;
-    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem; /* Điều chỉnh: Giảm font nav link */
+    padding: 0.4rem 0.7rem; /* Điều chỉnh: Giảm padding nav link */
     position: relative;
     overflow: hidden;
     transition: color var(--transition-speed); /* Smooth theme transition */
@@ -142,9 +144,9 @@ nav ul li a i {
 
 /* Sections */
 .section {
-    padding: 80px 5%; /* Increased padding for more space */
-    max-width: 1200px;
-    margin: 0 auto 40px auto; /* Space between sections */
+    padding: 60px 4%; /* Điều chỉnh: Giảm padding cho section */
+    max-width: 1100px; /* Điều chỉnh: Giảm max-width tổng thể của section */
+    margin: 0 auto 30px auto; /* Điều chỉnh: Giảm margin-bottom giữa các section */
     background-color: var(--bg-medium); /* Slightly lighter background for sections */
     border-radius: 8px; /* Slightly rounded corners for a softer, premium look */
     box-shadow: var(--box-shadow-dark); /* Using variable for shadow */
@@ -155,8 +157,8 @@ nav ul li a i {
 
 .section h2 {
     text-align: center;
-    font-size: 2.8rem; /* Larger heading */
-    margin-bottom: 2.5rem;
+    font-size: 2.5rem; /* Điều chỉnh: Giảm font size của H2 */
+    margin-bottom: 2rem; /* Điều chỉnh: Giảm margin-bottom */
     color: var(--accent-blue); /* Accent color for main section headings */
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -179,18 +181,18 @@ nav ul li a i {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 40px; /* Increased gap */
+    gap: 30px; /* Điều chỉnh: Giảm gap trong profile container */
 }
 
 .profile-image {
     flex: 1;
-    min-width: 250px;
+    min-width: 220px; /* Điều chỉnh: Giảm min-width */
     text-align: center;
 }
 
 .profile-image img {
-    width: 280px; /* Slightly larger image */
-    height: 280px;
+    width: 250px; /* Điều chỉnh: Giảm kích thước ảnh profile */
+    height: 250px; /* Điều chỉnh: Giảm kích thước ảnh profile */
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--accent-blue); /* Accent border */
@@ -204,12 +206,12 @@ nav ul li a i {
 
 .profile-info {
     flex: 2;
-    min-width: 300px;
+    min-width: 280px; /* Điều chỉnh: Giảm min-width */
 }
 
 .profile-info h1 {
-    font-size: 3.5rem; /* Larger name */
-    margin-bottom: 0.2em;
+    font-size: 3rem; /* Điều chỉnh: Giảm font size của H1 */
+    margin-bottom: 0.1em; /* Điều chỉnh: Giảm margin-bottom */
     text-transform: uppercase;
     letter-spacing: 3px;
     /* Gradient for text - doesn't change with CSS variables directly, might need JS for dynamic gradient colors */
@@ -218,42 +220,37 @@ nav ul li a i {
     -webkit-text-fill-color: transparent;
     transition: background var(--transition-speed); /* Smooth theme transition */
 }
-/* If you want dynamic gradient, you might need something like this in JS:
-document.body.classList.contains('light-mode') ? 'linear-gradient(90deg, #333333, #007BFF)' : 'linear-gradient(90deg, #FFFFFF, #00C0FF)'
-*/
-
 
 .profile-info .subtitle {
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* Điều chỉnh: Giảm font size subtitle */
     color: var(--accent-blue); /* Accent color for subtitle */
     margin-top: 0;
-    margin-bottom: 1.5rem;
-    transition: color var(--transition-speed); /* Smooth theme transition */
+    margin-bottom: 1rem; /* Điều chỉnh: Giảm margin-bottom */
 }
 
 .profile-info .description {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Điều chỉnh: Giảm font size description */
     color: var(--text-medium);
-    margin-bottom: 2rem;
-    transition: color var(--transition-speed); /* Smooth theme transition */
+    margin-bottom: 1.5rem; /* Điều chỉnh: Giảm margin-bottom */
 }
 
 .social-links ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Điều chỉnh: Giảm khoảng cách social links */
 }
 
 .social-links ul li a {
     display: flex;
     align-items: center;
     background-color: var(--bg-dark); /* Darker background for social buttons */
-    padding: 10px 15px;
+    padding: 8px 12px; /* Điều chỉnh: Giảm padding social buttons */
     border-radius: 5px;
     font-weight: 600;
     color: var(--text-light);
     border: 1px solid rgba(176, 176, 176, 0.1);
+    font-size: 0.9rem; /* Điều chỉnh: Giảm font social buttons */
     transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed), color var(--transition-speed);
 }
 
@@ -266,7 +263,7 @@ document.body.classList.contains('light-mode') ? 'linear-gradient(90deg, #333333
 
 .social-links ul li a i {
     margin-right: 8px;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Điều chỉnh: Giảm font icon social */
     color: var(--accent-blue); /* Icon color */
     transition: color var(--transition-speed);
 }
@@ -278,8 +275,8 @@ document.body.classList.contains('light-mode') ? 'linear-gradient(90deg, #333333
 /* General List Styles (Research, Awards) */
 ol, ul {
     color: var(--text-medium);
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem; /* Điều chỉnh: Giảm font size list */
+    line-height: 1.7; /* Điều chỉnh: Giảm line-height */
     transition: color var(--transition-speed); /* Smooth theme transition */
 }
 
@@ -314,9 +311,9 @@ ol li:before {
 .education-item,
 .experience-item {
     background-color: var(--bg-dark); /* Darker background for individual items */
-    padding: 30px;
+    padding: 25px; /* Điều chỉnh: Giảm padding item */
     border-radius: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Điều chỉnh: Giảm margin-bottom item */
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); /* Deeper shadow */
     transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed), border-color var(--transition-speed); /* Smooth theme transition */
     border: var(--border-thin); /* Subtle border */
@@ -329,43 +326,71 @@ ol li:before {
     border-color: var(--accent-blue); /* Border lights up */
 }
 
+/* New/Updated CSS for Education Logos */
+.education-header {
+    display: flex; /* Use Flexbox for logo and title */
+    align-items: center; /* Vertically align items in the center */
+    margin-bottom: 0.8em; /* Spacing below the header */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.education-logo {
+    width: 40px; /* Reduced logo size for a more compact look */
+    height: 40px; /* Reduced logo size */
+    object-fit: contain; /* Ensure logo fits without cropping */
+    margin-right: 15px; /* Space between logo and title */
+    border-radius: 4px; /* Slight border-radius for logos */
+    transition: filter var(--transition-speed); /* Smooth transition for filter */
+    filter: grayscale(80%) brightness(95%) contrast(150%); /* Subtle filter to match theme */
+}
+
+.education-item:hover .education-logo {
+    filter: grayscale(0%) brightness(100%) contrast(100%); /* Full color on hover */
+}
+
+
 .education-item h3,
 .experience-item h3 {
     color: var(--text-light);
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    font-size: 1.6rem; /* Giữ nguyên kích thước đã điều chỉnh */
+    margin-top: 0; /* Reset margin-top */
+    margin-bottom: 0; /* Reset margin-bottom */
+    flex-grow: 1; /* Allow title to take up remaining space */
 }
 
 .education-item p,
 .experience-item p {
     color: var(--text-medium);
     margin: 0.3em 0;
+    font-size: 0.95rem; /* Điều chỉnh: Giảm font size paragraph */
 }
 
+/* Base style for all list items within education and experience */
 .education-item ul,
 .experience-item ul {
     margin-top: 1em;
-    list-style: none;
-    padding-left: 0;
+    list-style: none; /* Remove default bullet style */
+    padding-left: 0; /* Remove default padding */
 }
 
 .education-item ul li,
 .experience-item ul li {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.6em; /* Adjust general vertical spacing for list items */
     color: var(--text-medium);
     position: relative;
-    padding-left: 25px; /* Space for custom bullet */
+    padding-left: 20px; /* Base padding for custom bullets */
+    font-size: 0.95rem; /* Điều chỉnh: Giảm font size list item */
 }
 
+/* Existing bullet style for the first level */
 .education-item ul li::before,
 .experience-item ul li::before {
-    content: '\2022'; /* Unicode bullet point */
+    content: '\2022'; /* Unicode bullet point (•) */
     color: var(--accent-blue); /* Accent color for bullets */
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Điều chỉnh: Giảm font size bullet icon */
     position: absolute;
     left: 0;
-    top: -5px;
+    top: -3px; /* Điều chỉnh vị trí bullet */
     transition: color var(--transition-speed); /* Smooth theme transition */
 }
 
@@ -388,9 +413,9 @@ ol li:before {
 /* Publication Section */
 .publication {
     background-color: var(--bg-dark);
-    padding: 25px;
+    padding: 20px; /* Điều chỉnh: Giảm padding publication */
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Điều chỉnh: Giảm margin-bottom publication */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed), border-color var(--transition-speed); /* Smooth theme transition */
     border: var(--border-thin);
@@ -404,7 +429,7 @@ ol li:before {
 
 .publication h4 {
     color: var(--text-light);
-    font-size: 1.25rem;
+    font-size: 1.15rem; /* Điều chỉnh: Giảm font size H4 */
     margin-top: 0;
     margin-bottom: 0.5em;
 }
@@ -412,7 +437,7 @@ ol li:before {
 .publication p {
     margin: 0.2em 0;
     color: var(--text-medium);
-    font-size: 0.95rem;
+    font-size: 0.9rem; /* Điều chỉnh: Giảm font size paragraph */
 }
 
 /* Awards Section */
@@ -429,10 +454,10 @@ ol li:before {
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsive grid */
-    gap: 30px; /* Increased gap */
+    gap: 25px; /* Điều chỉnh: Giảm gap trong grid logo */
     justify-items: center;
     align-items: center;
-    padding: 30px;
+    padding: 25px; /* Điều chỉnh: Giảm padding grid logo */
     background-color: var(--bg-dark);
     border-radius: 8px;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6); /* Inner shadow for depth */
@@ -441,19 +466,18 @@ ol li:before {
 
 .client-logo {
     max-width: 100%;
-    max-height: 80px; /* Vẫn giữ chiều cao tối đa này */
+    max-height: 70px; /* Điều chỉnh: Giảm chiều cao tối đa của logo */
     width: auto;
     height: auto;
     object-fit: contain;
 
-    /* **ĐIỀU CHỈNH FILTER MỚI:** */
-    /* Giảm độ xám hóa, tăng độ sáng và độ tương phản */
-    filter: grayscale(80%) brightness(95%) contrast(150%) opacity(0.7); /* Thêm opacity để làm mờ nhẹ nhưng vẫn rõ */
+    /* ĐIỀU CHỈNH FILTER: Đảm bảo logo nhìn thấy rõ ở chế độ tối */
+    filter: grayscale(80%) brightness(95%) contrast(150%) opacity(0.7);
     transition: filter var(--transition-speed), transform var(--transition-speed);
 }
 
 .client-logo:hover {
-    filter: grayscale(0%) brightness(100%) contrast(100%) opacity(1); /* Hiện rõ hoàn toàn khi hover */
+    filter: grayscale(0%) brightness(100%) contrast(100%) opacity(1); /* Full color and brighter on hover */
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
@@ -461,13 +485,13 @@ ol li:before {
 /* Contact Section */
 #contact p {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Điều chỉnh: Giảm font size paragraph */
     color: var(--text-medium);
     transition: color var(--transition-speed); /* Smooth theme transition */
 }
 
 #contact p:first-of-type {
-    font-size: 1.5rem; /* Larger name */
+    font-size: 1.3rem; /* Điều chỉnh: Giảm font size tên */
     color: var(--text-light);
     margin-bottom: 10px;
 }
@@ -477,69 +501,117 @@ footer {
     background-color: var(--bg-medium);
     color: var(--text-medium);
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
+    padding: 15px 0; /* Điều chỉnh: Giảm padding footer */
+    font-size: 0.85rem; /* Điều chỉnh: Giảm font size footer */
     border-top: var(--border-thin);
     transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed); /* Smooth theme transition */
 }
+
+/* --- Custom bullet styles for nested lists in Experience section --- */
+/* (Added based on our previous discussion) */
+
+/* Style for the second level (e.g., "SKon", "Samsung SDI", "LG, Hyundai, Hanhwa", "Semiconductor Project") */
+.experience-item ul ul li {
+    padding-left: 25px; /* Thụt lề sâu hơn một chút so với cấp 1 */
+}
+
+.experience-item ul ul li::before {
+    content: '\2013'; /* En dash, looks like a slightly longer hyphen */
+    color: var(--text-light); /* White color for level 2 bullets */
+    font-size: 1.1rem; /* Slightly smaller than level 1 */
+    top: 0px; /* Điều chỉnh vị trí để căn chỉnh tốt hơn với text */
+    left: 5px; /* Điều chỉnh để dấu gạch ngang không quá sát lề */
+}
+
+/* Style for the third level (e.g., "Developed a 32-bit to 8-bit image conversion") */
+.experience-item ul ul ul li {
+    padding-left: 30px; /* Thụt lề sâu hơn nữa */
+}
+
+.experience-item ul ul ul li::before {
+    content: '\25AA'; /* Small black square bullet */
+    color: var(--text-medium); /* Medium gray for level 3 bullets */
+    font-size: 0.8rem; /* Rất nhỏ để phân biệt */
+    top: 3px; /* Điều chỉnh vị trí để căn chỉnh tốt hơn với text */
+    left: 10px; /* Điều chỉnh để dấu vuông không quá sát lề */
+}
+
+/* Adjust vertical spacing between nested list items for better readability */
+.experience-item ul li {
+    margin-bottom: 0.6em; /* Giảm khoảng cách mặc định */
+}
+
+.experience-item ul ul li {
+    margin-top: 0.4em; /* Thêm một chút khoảng cách từ mục cha */
+    margin-bottom: 0.4em; /* Giảm khoảng cách giữa các mục con */
+}
+
+.experience-item ul ul ul li {
+    margin-top: 0.2em; /* Khoảng cách nhỏ hơn nữa */
+    margin-bottom: 0.2em;
+}
+
+/* --- End Custom bullet styles --- */
 
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .section {
-        padding: 60px 3%;
-        margin-bottom: 30px;
+        padding: 50px 3%; /* Điều chỉnh */
+        margin-bottom: 25px; /* Điều chỉnh */
     }
 
     .section h2 {
-        font-size: 2.2rem;
+        font-size: 2rem; /* Điều chỉnh */
     }
 
     nav ul {
-        gap: 1.5rem;
+        gap: 1rem; /* Điều chỉnh */
         flex-wrap: wrap;
         justify-content: center;
     }
 
     nav ul li a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.6rem;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        text-align: center;
+        font-size: 0.85rem; /* Điều chỉnh */
+        padding: 0.3rem 0.5rem; /* Điều chỉnh */
     }
 
     .profile-info h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* Điều chỉnh */
     }
 
     .profile-info .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem; /* Điều chỉnh */
     }
 
     .social-links ul {
+        gap: 10px; /* Điều chỉnh */
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
     }
 
     .education-item,
     .experience-item,
     .publication {
-        padding: 20px;
-        margin-bottom: 15px;
+        padding: 18px; /* Điều chỉnh */
+        margin-bottom: 12px; /* Điều chỉnh */
     }
 
     .education-item h3,
     .experience-item h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem; /* Điều chỉnh */
+    }
+    
+    .education-logo { /* Điều chỉnh cho kích thước màn hình trung bình */
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
     }
 
+
     .client-logo {
-        max-width: 90px; /* Điều chỉnh lại cho màn hình nhỏ hơn */
-        max-height: 70px;
+        max-width: 80px; /* Điều chỉnh */
+        max-height: 60px; /* Điều chỉnh */
     }
 }
 
@@ -550,28 +622,53 @@ footer {
     }
 
     nav ul li a {
-        padding: 0.3rem 0.5rem;
+        padding: 0.2rem 0.4rem; /* Điều chỉnh */
     }
 
     .section {
-        padding: 40px 2%;
+        padding: 30px 2%; /* Điều chỉnh */
     }
 
     .profile-image img {
-        width: 200px;
-        height: 200px;
+        width: 180px; /* Điều chỉnh */
+        height: 180px; /* Điều chỉnh */
     }
 
     .profile-info h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Điều chỉnh */
     }
 
     .social-links ul {
         flex-direction: column;
     }
 
+    .education-logo { /* Điều chỉnh cho kích thước màn hình nhỏ */
+        width: 30px;
+        height: 30px;
+        margin-right: 10px; /* Vẫn giữ margin-right */
+    }
+    .education-item h3 {
+        font-size: 1.2rem; /* Điều chỉnh lại nếu thấy cần */
+    }
+    .education-header {
+        flex-direction: row; /* Vẫn giữ logo và tiêu đề trên cùng một dòng nếu có thể */
+        align-items: center;
+        text-align: left;
+    }
+    /* Nếu muốn logo và text xuống dòng trên mobile nhỏ hơn, bạn có thể uncomment code này:
+    .education-header {
+        flex-direction: column; 
+        align-items: flex-start;
+        text-align: left;
+    }
+    .education-logo {
+        margin-bottom: 5px; 
+        margin-right: 0; 
+    }
+    */
+
     .client-logo {
-        max-width: 70px; /* Điều chỉnh lại cho màn hình nhỏ hơn nữa */
-        max-height: 60px;
+        max-width: 60px; /* Điều chỉnh */
+        max-height: 50px; /* Điều chỉnh */
     }
 }
