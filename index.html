@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pham Sy Phuc - Portfolio</title>
+    <title>Pham Sy Phuc - AI Engineer Portfolio</title>
     <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publication">Publication</a></li>
-                <li><a href="#award">Award</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#research"><i class="fas fa-flask"></i> Research</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#publication"><i class="fas fa-book"></i> Publication</a></li>
+                <li><a href="#award"><i class="fas fa-trophy"></i> Award</a></li>
+                <li><a href="#clients"><i class="fas fa-handshake"></i> Clients</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
     </header>
 
     <main>
-        <section id="about" class="section">
+        <section id="about" class="section" data-aos="fade-up">
             <div class="profile-container">
                 <div class="profile-image">
                     <img src="images/mrp.jpg" alt="Pham Sy Phuc">
@@ -32,18 +42,20 @@
                     <h1>Pham Sy Phuc</h1>
                     <p class="subtitle">AI Engineer</p>
                     <p class="description">I am an AI Research Engineer at <a href="http://www.innometry.com/en/" target="_blank">AI LAB @ Innometry</a>, in South Korea. Prior to joining Innometry, I served as an AI Researcher at <a href="https://www.jnu.ac.kr/eng/" target="_blank">Chonnam National University</a> and <a href="https://www.hnuh.co.kr/" target="_blank">Chonnam National University Hwasun Hospital</a> in South Korea. Before pursuing graduate research, I was an undergraduate researcher at <a href="https://www.hcmute.edu.vn/" target="_blank">Ho Chi Minh University of Technology and Education (HCMUTE)</a> in Vietnam. During that time, I also worked as a Teaching Assistant in the Faculty of Applied Sciences and the Faculty of Electrical Engineering at HCMUTE.</p>
-                    
+
                     <div class="social-links">
-                        <a href="https://github.com/PhucPhamSy" target="_blank">GitHub</a>
-                        <a href="https://www.linkedin.com/in/phucphamsy/" target="_blank">LinkedIn</a>
-                        <a href="https://scholar.google.com/citations?user=jGMCB84AAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        <ul>
+                            <li><a href="https://github.com/PhucPhamSy" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i> GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/phucphamsy/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=jGMCB84AAAAJ&hl=en" target="_blank" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i> Google Scholar</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="section">
-            <h2>Research</h2>
+        <section id="research" class="section" data-aos="fade-up">
+            <h2><i class="fas fa-flask"></i> Research</h2>
             <ol>
                 <li>Image enhancement, denoising, deblurring, and dehazing using algorithms and deep learning models (such as encoder-decoder, GAN, Diffusion, etc.) to improve the quality of X-ray and CT images.</li>
                 <li>Image segmentation and detection using rule-based algorithms and deep learning networks for machine inspection projects.</li>
@@ -52,15 +64,15 @@
             </ol>
         </section>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
+        <section id="education" class="section" data-aos="fade-up">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="education-list">
-                <div class="education-item">
+                <div class="education-item" data-aos="fade-up" data-aos-delay="100">
                     <h3>Master of Science in Artificial Intelligence Convergence</h3>
                     <p>Chonnam National University, South Korea</p>
                     <p>February 2021 - February 2023</p>
                 </div>
-                <div class="education-item">
+                <div class="education-item" data-aos="fade-up" data-aos-delay="200">
                     <h3>Bachelor of Engineering in Electrical Engineering</h3>
                     <p>Ho Chi Minh University of Technology and Education (HCMUTE), Vietnam</p>
                     <p>September 2016 - September 2020</p>
@@ -68,106 +80,170 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
-            <h2>Experience</h2>
+        <section id="experience" class="section" data-aos="fade-up">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
             <div class="experience-list">
-                <div class="experience-item">
-                    <h3>Innometry</h3>
-                        <p>AI Research Engineer, South Korea</p>
-                        <p>February 2023 - Present</p>
-                            <li style="margin-left: 20px;">Secondary battery projects for SKon (South Korea, Hungary, China)</li>
-                            <li style="margin-left: 40px; list-style-type: square;">Developed image conversion from 32-bit to 8-bit, achieving a high success rate for long-term testing.</li>
-                            <li style="margin-left: 40px; list-style-type: square;">Developed and optimized a deep learning model for inspecting foreign materials in batteries, achieving the highest NG detection rate and an inspection time of 0.003 seconds per battery.</li>
-                            <li style="margin-left: 20px;">Secondary battery projects for Samsung SDI (South Korea, China)</li>
-                            <li style="margin-left: 20px;">Secondary battery projects for Hyundai, Hanhwa, LG (South Korea)</li>
-                            <li style="margin-left: 20px;">Secondary battery projects for Northvolt (Europe)</li>
-                            <li style="margin-left: 20px;">Secondary battery projects for Ford, Nissan</li>
-                            <li style="margin-left: 20px;">Samsung semiconductor project</li>
-                            <li style="margin-left: 20px;">Samsung smartphone project</li>
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="company-info">
+                        <h3>Innometry</h3>
+                        </div>
+                    <p>AI Research Engineer, South Korea</p>
+                    <p>February 2023 - Present</p>
+                    <ul>
+                        <li>
+                            <strong>Engineered and deployed AI algorithms and image processing solutions</strong> for critical quality control initiatives with leading global battery manufacturers (SKon, Samsung SDI, Hyundai, Hanhwa, LG, Northvolt, Ford, Nissan). My independent development efforts, in collaboration with other departments, directly led to significant optimization of production processes and substantial cost savings:
+                            <ul>
+                                <li>
+                                    <strong>SKon (South Korea, Hungary, China)/Ford/Nissan/Northvolt:</strong>
+                                    <ul>
+                                        <li>
+                                            Developed a <strong>32-bit to 8-bit image conversion solution</strong> with a <strong>100% success rate</strong> in long-term testing (since June 2023). This solution enabled <strong>real-time internal/external visualization and monitoring</strong> of solid objects in production environments without specialized software, enhancing interaction capabilities. Implemented advanced <strong>HDR, image compression, and feature normalization algorithms</strong> (Python/C++/C#).
+                                        </li>
+                                        <li>
+                                            Designed and optimized a <strong>deep learning model</strong> for foreign material inspection in batteries, achieving a <strong>100% NG (No Good) detection rate</strong> and an inspection time of only <strong>0.003 seconds per battery</strong>. This drastically reduced external inspection time, <strong>optimizing overall production throughput</strong> compared to traditional methods.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Samsung SDI:</strong>
+                                    <ul>
+                                        <li>
+                                            Enhanced CT image for stacked battery cells using an <strong>encoder-decoder deep learning model</strong>, which led to <strong>significant production cost optimization</strong> for the company compared to outsourcing technology.
+                                        </li>
+                                        <li>
+                                            Developed an <strong>image denoising and detail enhancement model</strong> for X-ray-based external inspection of cylindrical battery cells, <strong>reducing X-ray imaging time from 10 seconds to just 0.2 seconds</strong>, greatly improving inspection efficiency.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>LG, Hyundai, Hanhwa:</strong>
+                                    <ul>
+                                        <li>
+                                            Automated the cathode and anode segmentation process for battery cells using an <strong>encoder-decoder deep learning model</strong>, achieving an impressive processing time of only <strong>0.02 seconds per battery</strong>.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Independently developed and integrated advanced AI and image processing algorithms</strong> for high-impact projects at Samsung Electronics, specifically within the Samsung semiconductor project and Samsung smartphone project:
+                            <ul>
+                                <li>
+                                    <strong>Semiconductor Project (Through Glass Via - TGV):</strong> Currently developing an AI model to <strong>reduce production time from 1.0 seconds to 0.1 seconds</strong>. This involves collecting data through various CT imaging methods and processing raw image data using specialized <strong>High Dynamic Range (HDR) image processing techniques</strong> tailored for TGV data.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="experience-item">
-                    <h3>Chonnam National University and Chonnam National University Hwasun Hospital</h3>
-                        <p>AI Researcher, South Korea</p>
-                        <p>March 2021 - February 2023</p>
-                            <li style="margin-left: 20px;">Survival analysis for Diffuse Large B-cell Lymphoma patients of Chonnam National University Hwasun Hospital and Jeonbuk University Hospital</li>
-                            <li style="margin-left: 20px;">Analyze patients' MRI, and CT images, design data for deep learning models</li>
-                </div>
-                
-                
-                <div class="experience-item">
-                    <h3>Geniesoft Inc.</h3>
-                        <p>AI Researcher, South Korea</p>
-                        <p>January 2022 - September 2022</p>
-                        <li style="margin-left: 20px;">Implemented pose estimation techniques to determine the position and orientation of the body for coaching applications.</li>
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="company-info">
+                        <h3>Chonnam National University and Chonnam National University Hwasun Hospital</h3>
+                        </div>
+                    <p>AI Researcher, South Korea</p>
+                    <p>March 2021 - February 2023</p>
+                    <ul>
+                        <li>Conducted <strong>survival analysis for Diffuse Large B-cell Lymphoma patients</strong> from Chonnam National University Hwasun Hospital and Jeonbuk University Hospital, leveraging multimodal data to optimize treatment strategies.</li>
+                        <li>Analyzed patients' <strong>MRI and CT images</strong>, and designed robust datasets for deep learning model development.</li>
+                    </ul>
                 </div>
 
-                <div class="experience-item">
-                    <h3>Samsung Electronics</h3>
-                        <p>Automation Engineer, South Korea</p>
-                        <p>December 2020 - February 2021</p>
-                        <li style="margin-left: 20px;">Automated optical inspection process engineers using Computer Vision technology.</li>
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="company-info">
+                        <h3>Geniesoft Inc.</h3>
+                        </div>
+                    <p>AI Researcher, South Korea</p>
+                    <p>January 2022 - September 2022</p>
+                    <ul>
+                        <li>Implemented <strong>pose estimation techniques</strong> to accurately determine body position and orientation for advanced coaching applications.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="company-info">
+                        <h3>Samsung Electronics</h3>
+                        </div>
+                    <p>Automation Engineer, South Korea</p>
+                    <p>December 2020 - February 2021</p>
+                    <ul>
+                        <li>Automated optical inspection processes using <strong>Computer Vision technology</strong> to enhance quality control and efficiency.</li>
+                    </ul>
                 </div>
 
             </div>
         </section>
 
-        <section id="publication" class="section">
-            <h2>Publications</h2>
+        <section id="publication" class="section" data-aos="fade-up">
+            <h2><i class="fas fa-book"></i> Publications</h2>
             <div class="publication-list">
-                <div class="publication">
-                    <h4 style="font-weight: normal;"><strong>[1]</strong> Survival Prediction Using Transformer-Based Categorical Feature Representation in the Treatment of Diffuse Large B-Cell Lymphoma</h4>
+                <div class="publication" data-aos="fade-up" data-aos-delay="100">
+                    <h4><strong>[1]</strong> Survival Prediction Using Transformer-Based Categorical Feature Representation in the Treatment of Diffuse Large B-Cell Lymphoma</h4>
                     <p>Sudarshan Pant,Sae-Ryung Kang, Minhee Lee, <strong>Pham Sy Phuc</strong>, Hyung-Jeong Yang, and Deok-Hwan Yang</p>
                     <p>Healthcare. Vol. 11. No. 8. MDPI, 2023.</p>
                 </div>
 
-                <div class="publication">
-                    <h4 style="font-weight: normal;"><strong>[2]</strong> Diffuse Large B-cell Lymphoma Survival Prediction using Encoding Clinical Features</h4>
+                <div class="publication" data-aos="fade-up" data-aos-delay="200">
+                    <h4><strong>[2]</strong> Diffuse Large B-cell Lymphoma Survival Prediction using Encoding Clinical Features</h4>
                     <p><strong>Pham Sy Phuc</strong>, Sae-Ryung Kang, Hyung-Jeong Yang, Deok-Hwan Yang, Sudarshan Pant, Soo-Hyung Kim, Guee-Sang Lee</p>
                     <p>The International Workshop on Frontiers of Computer Vision (IW-FCV), 2023</p>
                 </div>
 
-                <div class="publication">
-                    <h4 style="font-weight: normal;"><strong>[3]</strong> Prognosis Prediction using Multimodal Deep Learning in Diffuse Large B-cell Lymphoma Patients</h4>
+                <div class="publication" data-aos="fade-up" data-aos-delay="300">
+                    <h4><strong>[3]</strong> Prognosis Prediction using Multimodal Deep Learning in Diffuse Large B-cell Lymphoma Patients</h4>
                     <p><strong>Pham Sy Phuc</strong>, Sae-Ryung Kang, Hyung-Jeong Yang, Deok-Hwan Yang, Soo-Hyung Kim, Guee-Sang Lee</p>
                     <p>International Conference on Big Data Applications and Services (BigDas2022)</p>
                 </div>
 
-                <div class="publication">
-                    <h4 style="font-weight: normal;"><strong>[4]</strong> Improving Atrous Spatial Pyramid Pooling in DeepLabv3+ using the Attention mechanism for the diversity of polyps in semantic segmentation</h4>
+                <div class="publication" data-aos="fade-up" data-aos-delay="400">
+                    <h4><strong>[4]</strong> Improving Atrous Spatial Pyramid Pooling in DeepLabv3+ using the Attention mechanism for the diversity of polyps in semantic segmentation</h4>
                     <p><strong>Pham Sy Phuc</strong>, Sae-Ryung Kang, Hyung-Jeong Yang, Deok-Hwan Yang, Sudarshan Pant, Soo-Hyung Kim, Guee-Sang Lee</p>
                     <p>International Conference on Big Data Applications and Services (BigDas2021)</p>
                 </div>
 
-                <div class="publication">
-                    <h4 style="font-weight: normal;"><strong>[5]</strong> A Study on Test-Time Augmentation and Attention Mechanism in DeepLabv3+ for Deep Learning-Based Segmentation.</h4>
+                <div class="publication" data-aos="fade-up" data-aos-delay="500">
+                    <h4><strong>[5]</strong> A Study on Test-Time Augmentation and Attention Mechanism in DeepLabv3+ for Deep Learning-Based Segmentation.</h4>
                     <p><strong>Pham Sy Phuc</strong>, Hyung-Jeong Yang, Duy-Phuong Dao, Soo-Hyung Kim, Guee-Sang Lee</p>
                     <p>MediaEval, 2021</p>
                 </div>
 
-                <div class="publication">
-                    <h4 style="font-weight: normal;"><strong>[6]</strong> Diffuse Large B-cell Lymphoma Survival Prediction using Multimodal Deep Learning</h4>
+                <div class="publication" data-aos="fade-up" data-aos-delay="600">
+                    <h4><strong>[6]</strong> Diffuse Large B-cell Lymphoma Survival Prediction using Multimodal Deep Learning</h4>
                     <p><strong>Pham Sy Phuc</strong>, Sae-Ryung Kang, Hyung-Jeong Yang</p>
                     <p>IEEE Access, (Under review)</p>
                 </div>
             </div>
         </section>
 
-        <section id="award" class="section">
-            <h2>Awards</h2>
+        <section id="award" class="section" data-aos="fade-up">
+            <h2><i class="fas fa-trophy"></i> Awards</h2>
             <div class="awards-list">
                 <ol>
                     <li>Korean Professor Scholarship and Brain Korea Scholarship 21 (2021-2023)</li>
                     <li>3rd prize in the image processing shooting robot competition (2020)</li>
-                    <li>Scholarship for good academic performance(2017, 2018, 2020)</li>
-                </ol>  
+                    <li>Scholarship for good academic performance (2017, 2018, 2020)</li>
+                </ol>
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
+        <section id="clients" class="section clients-section" data-aos="fade-up">
+            <h2><i class="fas fa-handshake"></i> Clients & Projects</h2>
+            <div class="clients-grid">
+                <img src="images/clients/skon_logo.png" alt="SKon Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="50">
+                <img src="images/clients/samsung_sdi_logo.png" alt="Samsung SDI Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/clients/hyundai_logo.png" alt="Hyundai Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="150">
+                <img src="images/clients/hanhwa_logo.svg" alt="Hanwha Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+                <img src="images/clients/lg_logo.png" alt="LG Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="250">
+                <img src="images/clients/northvolt_logo.png" alt="Northvolt Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="300">
+                <img src="images/clients/ford_logo.png" alt="Ford Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="350">
+                <img src="images/clients/nissan_logo.png" alt="Nissan Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="400">
+                <img src="images/clients/samsung_logo.png" alt="Samsung Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="450">
+                </div>
+        </section>
+
+        <section id="contact" class="section" data-aos="fade-up">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
             <p>Pham Sy Phuc</p>
-            <p>Gyeongi-do, South Korea/Hochiminh city/Vietnam</p>
+            <p>Gyeonggi-do, South Korea / Ho Chi Minh City, Vietnam</p>
             <p>Email: syphucpham@innometry.com, phamsyphuc123@gmail.com</p>
         </section>
     </main>
@@ -176,6 +252,13 @@
         <p>&copy; 2025 Pham Sy Phuc. All rights reserved.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // global duration for animations
+            once: true,    // whether animation should happen only once - while scrolling down
+        });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -11,11 +11,13 @@ document.querySelectorAll('nav a').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
-    
+    const headerHeight = document.querySelector('header').offsetHeight; // Lấy chiều cao của header
+
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
+        // Adjust offset based on header height for accurate highlighting
+        if (window.pageYOffset >= sectionTop - headerHeight - 10) { // Thêm 10px buffer
             current = section.getAttribute('id');
         }
     });
@@ -37,6 +39,11 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate');
+            // Optionally, unobserve after animation to save resources
+            // observer.unobserve(entry.target); 
+        } else {
+            // Optional: remove animate class when out of view (for repeated animations)
+            // entry.target.classList.remove('animate');
         }
     });
 }, observerOptions);
@@ -45,42 +52,48 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Add hover effect to publications
-document.querySelectorAll('.publication').forEach(pub => {
-    pub.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateX(10px)';
-        this.style.transition = 'transform 0.3s ease';
-    });
-    
-    pub.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateX(0)';
-    });
-});
-
 // Add typing effect to name
 const nameElement = document.querySelector('h1');
-const name = nameElement.textContent;
-nameElement.textContent = '';
+const nameText = nameElement.textContent; // Store original text
+nameElement.textContent = ''; // Clear text for typing effect
 
 let i = 0;
 function typeWriter() {
-    if (i < name.length) {
-        nameElement.textContent += name.charAt(i);
+    if (i < nameText.length) {
+        nameElement.textContent += nameText.charAt(i);
         i++;
         setTimeout(typeWriter, 100);
     }
 }
 
-// Start typing effect when page loads
-window.addEventListener('load', typeWriter);
+// Dark mode toggle logic
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
 
-// Add dark mode toggle
-const darkModeToggle = document.createElement('button');
-darkModeToggle.innerHTML = '🌙';
-darkModeToggle.className = 'dark-mode-toggle';
-document.body.appendChild(darkModeToggle);
+// Function to set dark mode state
+const setDarkMode = (isEnabled) => {
+    if (isEnabled) {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.innerHTML = '☀️';
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        document.body.classList.remove('dark-mode');
+        darkModeToggle.innerHTML = '🌙';
+        localStorage.setItem('darkMode', 'disabled');
+    }
+};
 
+// Check for dark mode preference on load
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        setDarkMode(true);
+    } else {
+        setDarkMode(false);
+    }
+    typeWriter(); // Start typing effect when DOM is ready
+});
+
+// Toggle dark mode on button click
 darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    darkModeToggle.innerHTML = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-}); 
+    const isDarkModeEnabled = document.body.classList.contains('dark-mode');
+    setDarkMode(!isDarkModeEnabled);
+});
