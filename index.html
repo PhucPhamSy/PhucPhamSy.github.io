@@ -19,7 +19,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#about" class="active"><i class="fas fa-user"></i> About</a></li>
                 <li><a href="#research"><i class="fas fa-flask"></i> Research</a></li>
                 <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
                 <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
@@ -108,7 +108,7 @@
                                     <strong>Samsung SDI:</strong>
                                     <ul>
                                         <li>
-                                            Enhanced CT image for stacked battery cells using an <strong>encoder-decoder deep learning model</strong>, which led to <strong>significant production cost optimization</strong> for the company compared to outsourcing technology.
+                                            Enhanced CT image sharpness for stacked battery cells using an <strong>encoder-decoder deep learning model</strong>, which led to <strong>significant production cost optimization</strong> for the company compared to outsourcing technology.
                                         </li>
                                         <li>
                                             Developed an <strong>image denoising and detail enhancement model</strong> for X-ray-based external inspection of cylindrical battery cells, <strong>reducing X-ray imaging time from 10 seconds to just 0.2 seconds</strong>, greatly improving inspection efficiency.
@@ -237,7 +237,7 @@
                 <img src="images/clients/ford_logo.png" alt="Ford Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="350">
                 <img src="images/clients/nissan_logo.png" alt="Nissan Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="400">
                 <img src="images/clients/samsung_logo.png" alt="Samsung Logo" class="client-logo" data-aos="zoom-in" data-aos-delay="450">
-                </div>
+            </div>
         </section>
 
         <section id="contact" class="section" data-aos="fade-up">
@@ -258,6 +258,77 @@
             duration: 1000, // global duration for animations
             once: true,    // whether animation should happen only once - while scrolling down
         });
+
+        // Basic JS for dark mode toggle - you already have this, just ensure it works with new CSS variables
+        // if your main.js already handles this, you don't need this part
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('light-mode');
+                    // You might want to save the preference in localStorage
+                    if (document.body.classList.contains('light-mode')) {
+                        localStorage.setItem('theme', 'light');
+                        darkModeToggle.textContent = '☀️'; // Change icon for light mode
+                    } else {
+                        localStorage.setItem('theme', 'dark');
+                        darkModeToggle.textContent = '🌙'; // Change icon for dark mode
+                    }
+                });
+
+                // Set initial theme based on localStorage
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                    document.body.classList.add('light-mode');
+                    darkModeToggle.textContent = '☀️';
+                } else {
+                    darkModeToggle.textContent = '🌙';
+                }
+            }
+        });
+
+        // Optional: Smooth scroll for navigation links - if not already in main.js
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Update active class in nav
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Optional: Observe sections to update active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.7 // Adjust as needed: percentage of section visible to be considered "active"
+        };
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+
     </script>
     <script src="assets/js/main.js"></script>
 </body>
